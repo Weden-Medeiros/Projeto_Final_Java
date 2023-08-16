@@ -1,0 +1,43 @@
+include ../cards/news-event-card.pug
+
+-
+  var newsContent = [
+    {
+      text: 'Keeping your stablecoins safe, secure, and pegged is a priority for any crypto investor.',
+      img: imgAPI.photo[1],
+      type: 'caption_news'
+    },
+    {
+      text: 'POAP NFTs are becoming increasingly widespread at crypto events. Here’s everything you need to know about them.',
+      img: imgAPI.photo[2],
+      type: 'caption_news'
+    },
+    {
+      text: 'Hamburg’s getting ready for a dose of crypto innovation this Tuesday, May 17, and Wednesday, May 18.',
+      img: imgAPI.photo[3],
+      type: 'caption_event'
+    },
+    {
+      text: 'How independently audited fiat reserves and licensing have helped BUSD maintain its peg during recent stablecoin volatility.',
+      img: imgAPI.photo[4],
+      type: 'caption_news'
+    },
+    {
+      text: '2021 was an exciting year for Initial Exchange Offerings (IEOs), with many new blockchain projects emerging on the crypto scene.',
+      img: imgAPI.photo[5],
+      type: 'caption_event'
+    },
+    {
+      text: 'Automate your earnings so you can eliminate money stress and spend more time with your family this Mother’s Day.',
+      img: imgAPI.photo[6],
+      type: 'caption_news'
+    }
+  ]
+
+.root
+  .carousel
+    .slick-carousel#news_carousel
+      each item in newsContent
+        div
+          .item
+            +news-card(item.img, item.type, item.text)

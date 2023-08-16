@@ -1,0 +1,148 @@
+.banner-slider
+  .banner-wrap
+    .root
+      .banner-wrap
+        .carousel
+          .slider#banner_slider
+            #slide1.slide
+              .inner
+                .img.background-banner
+                  |
+                  |
+                  img.img-2d3d(
+                    src=img_assets+img_artwork[3]
+                    data-2d=img_assets+img_artwork[2]
+                    data-3d=img_assets+img_artwork[3]
+                    alt='background'
+                  )/
+                  |
+                  |
+                .container
+                  .row
+                    .col-md-6.px-sm-6.px-0.py-3.d-flex.align-items-center
+                      .text
+                        .title.title-left
+                          h4.use-text-title2
+                            | #{$t.crypto_landing.banner_title}
+                        h5.use-text-subtitle2
+                          | #{$t.crypto_landing.banner_subtitle}
+                        .btn-area
+                          .scrollactive-nav.scrollnav
+                            |
+                            |
+                            a.button.btn.primary.btn-large.mq-xs-down.waves-effect(href=link.crypto.register data-class="block") #{$t.common.btn_get}
+                            |
+                            |
+                            a.btn.btn-outlined.btn-large.primary.mq-xs-down.waves-effect(href="#top-coin" data-class="block") #{$t.crypto_landing.banner_viewmarket}
+                            |
+                            |
+                    .col-md-6
+                      .img
+                        |
+                        |
+                        img.img-2d3d.img-slide1(
+                          src=img_assets+img_artwork[5]
+                          data-2d=img_assets+img_artwork[4]
+                          data-3d=img_assets+img_artwork[5]
+                          alt='banner 1 3D'
+                        )/
+                        |
+                        |
+            #slide2.slide
+              .inner
+                .container
+                  .row
+                    .col-md-6.px-sm-6.px-0.py-3.d-flex.align-items-center.order-md-last
+                      .text
+                        .title.title-left
+                          h4.use-text-title2
+                            | #{$t.crypto_landing.banner_title}
+                        h5.use-text-subtitle2 #{$t.crypto_landing.banner_subtitle}
+                        .btn-area
+                          .scrollactive-nav.scrollnav
+                            |
+                            |
+                            a.button.btn.primary.btn-large.mq-xs-down.waves-effect(
+                              href=link.crypto.register
+                              data-class="block"
+                            ) #{$t.common.btn_get}
+                            |
+                            |
+                            a.btn.btn-outlined.btn-large.primary.mq-xs-down.waves-effect(
+                              href="#top-coin"
+                              data-class="block"
+                            ) #{$t.crypto_landing.banner_viewmarket}
+                            |
+                            |
+                    .col-md-6.px-6.py-3.order-md-first
+                      .img
+                        |
+                        |
+                        img.img-2d3d.img-slide2(
+                          src=img_assets+img_artwork[7]
+                          data-2d=img_assets+img_artwork[6]
+                          data-3d=img_assets+img_artwork[7]
+                          alt='banner 2 3D'
+                        )/
+                        |
+                        |
+            #slide3.slide.center-content
+              .inner
+                .container
+                  .row.justify-content-end
+                    .col-12.px-lg-12.px-0
+                      .text.text-center
+                        .title-wrap
+                          .title.title-center
+                            h4.use-text-title2
+                              | #{$t.crypto_landing.banner_title}
+                        h5.use-text-subtitle2 #{$t.crypto_landing.banner_subtitle}
+                        .btn-area
+                          .scrollactive-nav.scrollnav
+                            |
+                            |
+                            a.button.btn.primary.btn-large.mq-xs-down.waves-effect(href=link.crypto.register data-class="block") #{$t.common.btn_get}
+                            |
+                            |
+                            a.btn.btn-outlined.btn-large.primary.mq-xs-down.waves-effect(href="#top-coin" data-class="block") #{$t.crypto_landing.banner_viewmarket}
+                            |
+                            |
+                    .col-12.py-3
+                      .img.h-banner
+                        |
+                        |
+                        img.img-2d3d(
+                          src=img_assets+img_artwork[9]
+                          data-2d=img_assets+img_artwork[8]
+                          data-3d=img_assets+img_artwork[9]
+                          alt='banner 3 3D'
+                        )/
+                        |
+                        |
+      .hidden-sm-down
+        .slide-nav-group
+          .container
+            nav.slide-nav#banner_nav
+              |
+              |
+              a.waves-effect.active(data-slide='0')
+                strong First Slide
+                | Banner with left text and right image
+              |
+              |
+              hr.divider
+              |
+              |
+              a.waves-effect(data-slide='1')
+                strong Second Slide
+                | Banner with left image and right text
+              |
+              |
+              hr.divider
+              |
+              |
+              a.waves-effect(data-slide='2')
+                strong Third Slide
+                | Banner with center text and image
+              |
+              |

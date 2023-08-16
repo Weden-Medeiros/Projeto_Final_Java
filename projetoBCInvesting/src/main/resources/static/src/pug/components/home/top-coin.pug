@@ -1,0 +1,125 @@
+include ../titles/title.pug
+include ../cards/coin-card
+include ./slider-art.pug
+
+-
+  var coinData = [
+    {
+      logo: '/images/crypto/btc.png',
+      name: 'BTC',
+      price: 1020,
+      status: 'up',
+      volume: 12345678,
+      percent: 8
+    },
+    {
+      logo: '/images/crypto/xrp.png',
+      name: 'XRP',
+      price: 12.56,
+      status: 'down',
+      volume: 9087654321,
+      percent: 3
+    },
+    {
+      logo: '/images/crypto/nem.png',
+      name: 'NEM',
+      price: 0.3,
+      status: 'up',
+      volume: 123456,
+      percent: 8
+    },
+    {
+      logo: '/images/crypto/iot.png',
+      name: 'IOTA',
+      price: 18.56,
+      status: 'down',
+      volume: 789123456,
+      percent: 3
+    },
+    {
+      logo: '/images/crypto/mnr.png',
+      name: 'MNR',
+      price: 1.45,
+      status: 'up',
+      volume: 54321,
+      percent: 8
+    },
+    {
+      logo: '/images/crypto/byc.png',
+      name: 'BYC',
+      price: 22.34,
+      status: 'down',
+      volume: 90875643,
+      percent: 3
+    },
+    {
+      logo: '/images/crypto/iot.png',
+      name: 'IOTA',
+      price: 0.01,
+      status: 'down',
+      volume: 98765903,
+      percent: 3
+    },
+    {
+      logo: '/images/crypto/mnr.png',
+      name: 'MNR',
+      price: 1.45,
+      status: 'up',
+      volume: 1239874560,
+      percent: 8
+    },
+    {
+      logo: '/images/crypto/byc.png',
+      name: 'BYC',
+      price: 22.34,
+      status: 'down',
+      volume: 56789,
+      percent: 3
+    }
+  ]
+
+.root
+  .container.carousel-header
+    +title-main("center", $t.crypto_landing.banner_viewmarket)
+    p.use-text-subtitle2.text-center
+      | #{$t.crypto_landing.banner_title}
+    .floating-artwork
+      +slider-art('top_coin')
+        .wow.fadeInRightShort(data-wow-offset="60" data-wow-delay="0.3s" data-wow-duration="0.5s")
+          |
+          |
+          img.img-2d3d(
+            src=img_assets+img_artwork[11]
+            data-2d=img_assets+img_artwork[10]
+            data-3d=img_assets+img_artwork[11]
+            class="img-2d3d"
+            alt='top coin'
+          )/
+          |
+          |
+  .slider-wrap
+    .carousel
+      .slick-carousel#top_coin_carousel(data-length=coinData.length)
+        .props.item-props-first
+          div
+        each item in coinData
+          .item
+            +coin-card(assets+item.logo, item.name, item.price, item.status, item.volume, item.percent)
+      |
+      |
+      button.btn-floating.nav.prev.waves-effect#prev_coin(type="button")
+        |
+        |
+        i.ion-chevron-left
+        |
+        |
+      |
+      |
+      button.btn-floating.nav.next.waves-effect#next_coin(type="button")
+        |
+        |
+        i.ion-chevron-right
+        |
+        |
+      |
+      |

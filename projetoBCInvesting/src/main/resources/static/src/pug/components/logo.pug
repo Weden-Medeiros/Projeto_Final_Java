@@ -1,0 +1,9 @@
+mixin logo(type = '', size='medium')
+  |
+  |
+  span.logo-main(class=type+' '+size)
+    |
+    img(src=assets + brand.crypto.img alt='logo')/
+    | #{type !== 'only' ? brand.crypto.name : ''}
+  |
+  |

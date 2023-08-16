@@ -1,0 +1,62 @@
+.testimonial-card {
+  position: relative;
+  margin-top: 50px;
+  h5 {
+    font-weight: $font-medium;
+  }
+
+  .caption-name {
+    display: block;
+    font-size: 14px;
+    @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+  }
+
+  .paper {
+    height: 280px;
+    overflow: visible;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: border 0.4s ease-out;
+    padding: $spacing1;
+    position: relative;
+    &.card {
+      border-radius: $rounded-big;
+    }
+    @include breakpoints-up(sm) {
+      margin: spacing(3, 0);
+      padding: spacing(5, 15)
+    }
+    .slick-active &{
+      @include use-theme(border-color, $palette-primary-light, $palette-primary-dark);
+    }
+  }
+
+  .text {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 80px;
+    font-size: 18px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    @include breakpoints-down(xs) {
+      font-size: 14px;
+      -webkit-line-clamp: 4
+    }
+  }
+
+  .avatar {
+    @include shadow8;
+    width: 80px;
+    height: 80px;
+    margin: -32px auto $spacing5;
+    border-radius: 50% !important;
+    box-sizing: content-box;
+    overflow: visible;
+    overflow: hidden;
+    @include breakpoints-up(sm) {
+      margin: -80px auto 16px;
+    }
+  }
+
+}

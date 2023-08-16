@@ -1,0 +1,15 @@
+mixin testi-card(text, name, title, avatar)
+  .testimonial-card
+    .card.paper
+      .avatar-img.avatar
+        |
+        |
+        img(src=avatar alt='avatar')/
+        |
+        |
+      h5.use-text-subtitle2 #{name}
+      p.caption-name
+        | #{title}
+      p.text
+        | #{text}
+

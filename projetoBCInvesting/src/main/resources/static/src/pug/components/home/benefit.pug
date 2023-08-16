@@ -1,0 +1,35 @@
+include ../titles/title.pug
+
+-
+  var imgSlider = [
+    img_artwork[28],
+    img_artwork[29],
+    img_artwork[30],
+    img_artwork[31],
+    img_artwork[32],
+    img_artwork[33]
+  ]
+
+.root
+  .deco-bg
+    svg
+      include ../svg/deco-benefit
+  .container.max-md.fixed-width
+    .wrapper
+      .desc
+        +title-main('center', $t.crypto_landing.benefit_title)
+        p.use-text-subtitle2
+          | #{$t.crypto_landing.banner_subtitle}
+        .carousel
+          .slider#benefit_slider
+            each item in imgSlider
+              .slide
+                .border
+                  figure
+                    |
+                    |
+                    img(src=item alt='screen')/
+                    |
+                    |
+
+

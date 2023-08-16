@@ -1,0 +1,68 @@
+include ../titles/title.pug
+include ../cards/testi-stack-card.pug
+
+-
+  var testiContent = [
+    {
+      text: 'Such a great platform, works smoothly, looks great and has a beginners version were you can easily switch back and forth from if you\'re new to crypto and reading charts and just want to keep things simple and easy.',
+      name: 'John Doe',
+      avatar: imgAPI.avatar[6],
+      title: 'Chief Digital Officer'
+    },
+    {
+      text: 'Really great way to start with crypto. Love the variety of different earning products and the BNB dust converting.',
+      name: 'Jean Doe',
+      avatar: imgAPI.avatar[7],
+      title: 'Chief Digital Officer'
+    },
+    {
+      text: 'Overall, the app is fantastic. Relatively easy to use and very informative. I already knew the basics, but I\'ve learnt a tonne through using their app and networks.',
+      name: 'Jena Doe',
+      avatar: imgAPI.avatar[1],
+      title: 'Graphic Designer'
+    },
+    {
+      text: 'Has literally everything at your fingertips. Would only have one suggestion to have more data analytic capability within your own wallet, but other than that, pretty reliable and perfect!',
+      name: 'Jovelin Doe',
+      avatar: imgAPI.avatar[2],
+      title: 'Senior Graphic Designer'
+    },
+    {
+      text: 'Best Crypto Trading Platform. I have been operating the software since one year and never encountered a problem.',
+      name: 'Jihan Doe',
+      avatar: imgAPI.avatar[3],
+      title: 'CEO Software House'
+    },
+    {
+      text: 'At the beginning was confusing, but after some research my conclusion is that this platform is amazing.',
+      name: 'John Doe',
+      avatar: imgAPI.avatar[9],
+      title: 'Senior Graphic Designer'
+    }
+  ]
+
+.root
+  .container.fixed-width-lg-up
+    +title-main("center", $t.crypto_landing.testi_title)
+    p.use-text-subtitle2.text-center #{$t.crypto_landing.testi_subtitle}
+    .row.spacing6.justify-content-center
+      .col-md-10.my-6
+        .slider-wrap
+          .carousel
+            |
+            |
+            button.btn.nav.prev.waves-effect#prev_testi
+              i.ion-ios-arrow-back
+            |
+            |
+            .slick-carousel#testimonial_carousel
+              each item in testiContent
+                .item
+                  .testi-content
+                    +testi-card(item.text, item.name, item.title, item.avatar)
+            |
+            |
+            button.btn.nav.next.waves-effect#next_testi
+              i.ion-ios-arrow-forward
+            |
+            |

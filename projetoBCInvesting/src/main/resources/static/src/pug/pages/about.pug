@@ -1,0 +1,70 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " About"
+  - var pageName = "about"
+  - var headerHome = false
+
+block content
+  div#about-page
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      .container-front
+        // ##### BANNER #####
+        include ../components/about/banner.pug
+        |
+        |
+        +about-banner
+          img.img-2d3d(src=img_assets+img_artworkInner[1] data-2d=img_assets+img_artworkInner[0] data-3d=img_assets+img_artworkInner[1] alt='services 3d')/
+        // ##### BANNER #####
+        |
+        |
+        |
+        // ##### COMPANY LOGO #####
+        include ../components/company-logo.pug
+        // ##### END COMPANY LOGO #####
+        |
+        |
+        |
+        // ##### COUNTER #####
+        .space-top-short
+          include ../components/counter.pug
+          +counter
+        // ##### END COUNTER #####
+        |
+        |
+        |
+        // ##### VIDEO PROGRESS #####
+        .space-top-short
+          .container
+            .row.justify-content-center
+              .col-md-6.px-lg-6
+                include ../components/about/video.pug
+              .col-md-6.col-sm-8.px-lg-6
+                include ../components/about/progress.pug
+        // ##### END VIDEO PROGRESS #####
+        |
+        |
+        |
+        // ##### TEAM SLIDER #####
+        .space-bottom-short.space-top-short
+          include ../components/about/team-slider.pug
+        // ##### END TEAM SLIDER #####
+        |
+        |
+        |
+        // ##### PHOTO SLIDER #####
+        include ../components/about/photo-slider.pug
+        // ##### END PHOTO SLIDER #####
+        |
+        |
+        |
+      // ##### FOOTER #####
+      include ../components/footer/extend.pug
+      +footer-extend(true)
+        div
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

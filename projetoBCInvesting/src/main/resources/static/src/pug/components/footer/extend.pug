@@ -1,0 +1,20 @@
+mixin footer-extend(withcounter)
+  .footer-counter(class=withcounter ? 'extend' : '')
+    |
+    |
+    span.deco
+    |
+    |
+    if withcounter
+      div
+        include ../counter-single
+        .action
+          h4.use-text-title2
+            | #{$t.common.about_ready}
+          |
+          |
+          a.btn.btn-large.secondary(href="#")
+            | #{$t.crypto_landing.getstarted}
+          |
+          |
+    block

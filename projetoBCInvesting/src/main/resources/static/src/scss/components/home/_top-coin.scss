@@ -1,0 +1,98 @@
+#top-coin {
+  .root {
+    position: relative;
+    padding: spacing(10, 0);
+    @include breakpoints-down(sm) {
+      padding: spacing(0, 0, 5);
+    }
+  }
+
+  .floating-artwork {
+    direction: ltr;
+    position: absolute;
+    width: 100%;
+    top: spacing(8);
+    left: 0;
+    .artwork {
+      @include breakpoints-up(md) {
+        margin-right: $spacing5
+      }
+      @include breakpoints-up(lg) {
+        float: right
+      }
+      @media (min-width: 1400px) {
+        margin-right: $spacing5 * -1
+      }
+    }
+  }
+
+  .props {
+    > div {
+      width: 440px;
+      height: 2px;
+    }
+    @include breakpoints-down(sm) {
+      display: none !important;
+    }
+    &:focus {
+      outline: none
+    }
+  }
+
+  .carousel {
+    position: relative;
+    z-index: 5;
+    margin-top: $spacing6;
+    @include breakpoints-up(md) {
+      margin-bottom: -20px;
+    }
+  }
+  .item {
+    padding: $spacing1;
+    @include use-theme(border-color, $palette-primary-light, $palette-primary-dark);
+    &:focus {
+      outline: none
+    }
+    > * {
+      margin: 0 auto
+    }
+  }
+
+  .nav {
+    position: absolute;
+    top: 50%;
+    border-radius: $rounded-small;
+    width: 36px;
+    z-index: 6;
+    height: 36px;
+    padding: 0;
+    min-width: 0;
+    background: $palette-primary-dark;
+    @include shade2;
+    [dir="rtl"] & {
+      transform: scale(-1.6)
+    }
+    [dir="ltr"] & {
+      transform: scale(1.6)
+    }
+    &:hover {
+      background: $palette-primary-main;
+    }
+    i {
+      font-size: 24px;
+      font-weight: bold;
+      color: $palette-common-white;
+    }
+    @include breakpoints-down(sm) {
+      display: none;
+    }
+  }
+
+  .prev {
+    @include left(0)
+  }
+  .next {
+    @include right(0)
+  }
+
+}

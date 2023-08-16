@@ -1,0 +1,27 @@
+extends ../layouts/app.pug
+
+block variables
+  - var pageTitle = " Contact"
+  - var pageName = "contact"
+  - var headerHome = false
+
+block content
+  div#contact-page
+    .main-wrap
+      include ../components/header/main.pug
+      |
+      |
+      |
+      // ##### CONTACT FORM #####
+      .space-top-short.space-bottom
+        include ../components/forms/contact.pug
+      // ##### END CONTACT FORM #####
+      |
+      |
+      |
+      // ##### FOOTER #####
+      include ../components/footer/extend.pug
+      +footer-extend(false)
+        .space-top-short-sm
+          include ../components/footer/main.pug
+      // ##### END FOOTER #####

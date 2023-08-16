@@ -1,0 +1,9 @@
+mixin hexa-deco(extend)
+  .hexa-deco
+    if extend
+      .extend-deco
+        svg.hexa.top
+          include ../svg/deco-hexa.pug
+        svg.hexa.bottom
+          include ../svg/deco-hexa.pug
+    .deco-bg

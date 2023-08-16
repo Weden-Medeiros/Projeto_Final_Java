@@ -1,0 +1,47 @@
+.market-carousel {
+  position: absolute;
+  top: 0px;
+  z-index: 1200;
+  @include left(0);
+  width: 100%;
+  height: 40px;
+  @include palette-background-paper;
+  @include shade;
+  padding: $spacing1;
+  .item {
+    padding: spacing(0.5, 3);
+    font-size: 14px;
+    font-weight: $font-bold;
+    &:focus {
+      outline: none
+    }
+  }
+
+  .coin {
+    display: flex;
+    .logo {
+      width: 20px;
+      height: auto;
+      @include margin-right($spacing1);
+      img {
+        width: 100%;
+        height: auto
+      }
+    }
+    i {
+      font-style: normal
+    }
+  }
+
+  .down {
+    color: #FF7272
+  }
+
+  .up {
+    color: #5DD662
+  }
+
+  .stay {
+    color: #b2b2b2
+  }
+}

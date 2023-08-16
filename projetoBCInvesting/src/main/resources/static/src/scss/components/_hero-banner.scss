@@ -1,0 +1,35 @@
+$deco-bottom-light: '../images/crypto/deco-banner-light.svg';
+$deco-bottom-dark:  '../images/crypto/deco-banner-dark.svg';
+
+.hero-banner-wrap  {
+  position: relative;
+  background-image: linear-gradient(120deg, $palette-primary-main, $palette-secondary-main);
+  @include breakpoints-up(md) {
+    padding-bottom: $spacing20;
+  }
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include use-theme(background, $palette-common-white, $palette-common-black);
+    @include use-theme(opacity, 0.9, 0.6);
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    @include use-theme(background-image, url($deco-bottom-light), url($deco-bottom-dark));
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+  }
+  .container {
+    position: relative;  
+  }
+}

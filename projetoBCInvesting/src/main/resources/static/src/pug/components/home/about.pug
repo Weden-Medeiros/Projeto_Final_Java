@@ -1,0 +1,98 @@
+include ../titles/title.pug
+
+.main-feature
+  if youtube.use
+    #video_modal.modal.video-popup
+      .modal-content
+        |
+        |
+        .headline
+          h4 #{$t.crypto_landing.banner_title}
+          |
+          |
+          button.btn-icon.modal-close.waves-effect
+            i.material-icons close
+        .text-center
+          #video_iframe
+  .container.fixed-width
+    .row.spacing6
+      .col-md-6.px-6.order-lg-last
+        +title-main("left", $t.crypto_landing.mainfeature_title)
+        p.pb-2.use-text-subtitle2.text-center.text-md-start
+          | #{$t.crypto_landing.mainfeature_subtitle}
+        .card.video
+          figure
+            |
+            |
+            img(src=img_artwork[34] alt='cover')/
+            |
+            |
+          |
+          |
+          button.btn-icon.play-btn.modal-trigger.waves-effect(data-target="video_modal" data-video="QPMkYyM2Gzg")
+            i.ion-ios-play-outline
+          |
+          |
+      .col-md-6.px-6.feature-wrap
+        .deco
+          |
+          |
+          svg(width='377px', height='440px', viewbox='0 0 377 440', version='1.1')
+            defs
+              lineargradient#primary-hexa(x1='34.1359172%', y1='14.3140713%', x2='132.662444%', y2='100%')
+                stop(stop-color='#E1BEE7', offset='0%')
+                stop(stop-color='#9C27B0', offset='100%')
+              lineargradient#secondary-hexa(x1='56.1985951%', y1='11.7667404%', x2='20.6835068%', y2='110.664023%')
+                stop(stop-color='#FFA000', offset='0%')
+                stop(stop-color='#FFECB3', offset='100%')
+              lineargradient#accent-hexa(x1='56.2159946%', y1='11.7667404%', x2='20.6012149%', y2='110.664023%')
+                stop(stop-color='#D1C4E9', offset='0%')
+                stop(stop-color='#673AB7', offset='100%')
+            g(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd')
+              g#Main-Feature(transform='translate(-208.000000, -968.000000)')
+                g(transform='translate(112.000000, 782.000000)')
+                  g#Group-3(transform='translate(96.000000, 186.000000)')
+                    path(d='M0,293.262681 C0,308.794648 8.32197774,323.147545 21.8317273,330.913528 L166.668273,414.175512 C180.178022,421.941496 196.821978,421.941496 210.331727,414.175512 L355.168273,330.913528 C368.678022,323.147545 377,308.794648 377,293.262681 L377,126.738016 C377,111.205352 368.678022,96.8531518 355.168273,89.0864719 L210.331727,5.8244876 C196.821978,-1.94149587 180.178022,-1.94149587 166.668273,5.8244876 L21.8317273,89.0864719 C8.32197774,96.8531518 0,111.205352 0,126.738016 L0,293.262681 Z', fill='url(#secondary-hexa)')
+                    path(d='M315,360.877113 C315,363.465775 316.368601,365.857924 318.590364,367.152255 L342.409636,381.029252 C344.631399,382.323583 347.368601,382.323583 349.590364,381.029252 L373.409636,367.152255 C375.631399,365.857924 377,363.465775 377,360.877113 L377,333.123003 C377,330.534225 375.631399,328.142192 373.409636,326.847745 L349.590364,312.970748 C347.368601,311.676417 344.631399,311.676417 342.409636,312.970748 L318.590364,326.847745 C316.368601,328.142192 315,330.534225 315,333.123003 L315,360.877113 Z', fill='url(#primary-hexa)')
+                    path(d='M15,405.298115 C15,409.550915 17.2515696,413.480875 20.9067273,415.607276 L60.0932727,438.4052 C63.7484304,440.5316 68.2515696,440.5316 71.9067273,438.4052 L111.093273,415.607276 C114.74843,413.480875 117,409.550915 117,405.298115 L117,359.702076 C117,355.449085 114.74843,351.519315 111.093273,349.392724 L71.9067273,326.5948 C68.2515696,324.4684 63.7484304,324.4684 60.0932727,326.5948 L20.9067273,349.392724 C17.2515696,351.519315 15,355.449085 15,359.702076 L15,405.298115 Z', fill='url(#accent-hexa)')
+          |
+          |
+        .counter
+          .lower
+            .wow.flipInY(data-wow-offset="380" data-wow-duration="0.5s")
+              .card.paper
+                |
+                |
+                span.ion-ios-ionic-outline
+                |
+                |
+                h6.title +600
+                p #{$t.crypto_landing.mainfeature_supported}
+            .wow.flipInY(data-wow-offset="300" data-wow-duration="0.5s")
+              .card.paper
+                |
+                |
+                span.ion-ios-people-outline
+                |
+                |
+                h6.title +200K
+                p #{$t.crypto_landing.mainfeature_registered}
+          .higher
+            .wow.flipInY(data-wow-offset="390" data-wow-duration="0.5s")
+              .card.paper
+                |
+                |
+                span.ion-ios-box-outline
+                |
+                |
+                h6.title +20M
+                p #{$t.crypto_landing.mainfeature_open}
+            .wow.flipInY(data-wow-offset="320" data-wow-duration="0.5s")
+              .card.paper
+                |
+                |
+                span.ion-ios-heart-outline
+                |
+                |
+                h6.title +50M
+                p #{$t.crypto_landing.mainfeature_invested}

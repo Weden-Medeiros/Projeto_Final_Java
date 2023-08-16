@@ -1,0 +1,145 @@
+#testimonials {
+  .root {
+    position: relative;
+    @include breakpoints-up(sm) {
+      padding-bottom: $spacing10;
+    }
+  }
+
+  .carousel {
+    position: relative;
+    @include breakpoints-up(md) {
+      padding: spacing(0, 2);
+    }
+    > div {
+      z-index: 10
+    }
+    .slick-dots{
+      position: relative;
+      bottom: -10px;
+      li {
+        width: 15px;
+        height: 10px;
+        border: 1px solid;
+        @include use-theme(border-color, $palette-primary-main, $palette-primary-light);
+        border-radius: 15px;
+        opacity: 0.7;
+        transition: all 0.5s ease-out;
+        margin: 0 4px;
+        &.slick-active {
+          @include use-theme(background, linear-gradient(120deg, $palette-secondary-main, $palette-primary-main), linear-gradient(120deg, $palette-secondary-light, $palette-primary-light));
+          width: 30px;
+        }
+      }
+      li button:before {
+        display: none
+      }
+    }
+    &:after, &:before {
+      content: "";
+      border-radius: $rounded-big;
+      @include palette-background-paper;
+      @include shade;
+      height: 150px;
+      position: absolute;
+      @include breakpoints-down(xs) {
+        display: none;
+      }
+    }
+    &:after {
+      width: 85%;
+      bottom: -5px;
+      @include left(50%);
+      [dir="ltr"] & {
+        transform: translate(-50%, 0)
+      }
+      [dir="rtl"] & {
+        transform: translate(50%, 0)
+      }
+    }
+    &:before {
+      width: 80%;
+      bottom: -35px;
+      @include left(50%);
+      border-radius: $rounded-big;
+      [dir="ltr"] & {
+        transform: translate(-50%, 0)
+      }
+      [dir="rtl"] & {
+        transform: translate(50%, 0)
+      }
+    }
+    > button {
+      @include breakpoints-down(xs) {
+        display: none;
+      }
+    }
+  }
+
+  .item {
+    padding: $spacing1;
+    @include breakpoints-up(md) {
+      padding: spacing(0, 1)
+    }
+    &:focus {
+      outline: none
+    }
+  }
+
+  .testi-content {
+    position: relative;
+    @include breakpoints-up(sm) {
+      padding: 0 24px;
+    }
+  }
+
+  .slide-content {
+    animation-duration: 1s;
+    animation-fill-mode: both
+  }
+
+  .slide {
+    background: none
+  }
+
+  .nav {
+    position: absolute;
+    border: none;
+    z-index: 12;
+    top: 48%;
+    width: 40px;
+    height: 40px !important;
+    @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
+    @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+    @include shade;
+    border-radius: $rounded-small;
+    cursor: pointer;
+    [dir="rtl"] & {
+      transform: rotate(180deg)
+    }
+    [dir="ltr"] & {
+      transform: rotate(0deg)
+    }
+    i {
+      color: $palette-primary-main;
+      position: relative;
+      font-size: 32px;
+      line-height: 40px;
+    }
+    &:focus {
+      outline: none
+    }
+  }
+  .prev {
+    @include left(32px);
+    i {
+      @include right(3px);
+    }
+  }
+  .next {
+    @include right(32px);
+    i {
+      @include left(1px);
+    }
+  }
+}

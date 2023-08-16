@@ -1,0 +1,25 @@
+// #### HEADER ####
+header.app-bar.header#header(class=headerHome ? 'market' : '')
+  .container
+    .header-content
+      nav.nav-menu.flex-grow-1
+        |
+        |
+        .logo.flex-grow-1.start-mobile
+          |
+          |
+          a(href=link.crypto.home)
+            include ../logo.pug
+            +logo('landscape', 'large')
+          |
+          |
+        nav.user-menu
+          |
+          |
+          a.btn.secondary.waves-effect(href=basicMenuLink !== undefined ? basicMenuLink : link.crypto.login)
+            | #{basicMenuText !== undefined ? basicMenuText : $t.common.login}
+          |
+          |
+          span.spacer.vertical-divider.show-md-up
+          include ./top-nav/settings
+// #### END HEADER ####

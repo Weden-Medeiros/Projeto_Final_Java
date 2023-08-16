@@ -1,0 +1,13 @@
+.counter-wrap {
+  position: relative;
+  margin: spacing(5, 0);
+  text-align: center;
+  h3 {
+    font-weight: $font-bold;
+    margin-bottom: $spacing2;
+    @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+    @include breakpoints-down(xs) {
+      font-size: 36px;
+    }
+  }
+}

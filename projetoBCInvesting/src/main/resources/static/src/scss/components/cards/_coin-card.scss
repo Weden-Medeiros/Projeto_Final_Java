@@ -1,0 +1,77 @@
+.card.coin-card {
+  padding: $spacing5;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-out;
+  width: 360px;
+  @include breakpoints-down(xs) {
+    width: 260px;
+    padding: $spacing1
+  }
+  &:hover {
+    border-color: $palette-primary-main;
+  }
+  .header-coin {
+    margin-bottom: $spacing3;
+    display: flex;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    @include shade2;
+    @include margin-right($spacing3)
+  }
+
+  .name {
+    h4 {
+      font-size: 24px;
+      font-weight: $font-bold;
+      margin-bottom: 4px;
+    }
+    span {
+      @include use-theme(background, $light-divider, $dark-divider);
+      border-radius: $rounded-small;
+      font-weight: $font-regular;
+      font-size: 16px;
+      padding: spacing(0.25, 1.5);
+      display: inline-block;
+      @include padding-left(12px);
+      position: relative;
+      top: -4px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .price {
+    font-size: $font-medium;
+  }
+
+  .property {
+    margin-top: $spacing4;
+    font-size: 18px;
+    font-weight: $font-medium;
+    p {
+      margin-bottom: 0;
+      font-weight: $font-medium;
+      @include palette-text-secondary;
+    }
+    i {
+      font-style: normal;
+    }
+  }
+
+  .down {
+    color: #FF7272
+  }
+
+  .up {
+    color: #00c708
+  }
+
+  .stay {
+    color: #b2b2b2
+  }
+
+}

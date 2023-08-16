@@ -1,0 +1,38 @@
+mixin coin-card(logo, name, price, status, volume, percent)
+  .card.coin-card
+    .header-coin
+      .avatar-img.logo
+        |
+        |
+        img(src=logo alt='name')/
+        |
+        |
+      .name
+        h4
+          | #{name} &nbsp;
+          span USD
+        p
+          i.ion-flame
+          | Top Volume
+    .price.px-2
+      h3.use-text-title2
+        | $ #{price}
+    .property
+      .row
+        .col-xs-6.px-2.pb-3
+          if status === 'down'
+            span.down
+              i ▼
+              | #{percent}%
+          else if status === 'up'
+            span.up
+              i ▲
+              | #{percent}%
+          else
+            span.stay
+              i -
+              | #{percent}%
+          p.use-text-caption 24h Change
+        .col-xs-6.px-2.pb-3
+          | #{volume}
+          p.use-text-caption 24h Volume

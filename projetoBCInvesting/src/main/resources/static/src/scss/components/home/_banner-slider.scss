@@ -1,0 +1,235 @@
+$deco-bottom-light: '../images/crypto/deco-banner-light.svg';
+$deco-bottom-dark:  '../images/crypto/deco-banner-dark.svg';
+
+.banner-slider {
+  .root {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 320px;
+    margin-bottom: -320px;
+    background-image: linear-gradient(120deg, $palette-primary-main, $palette-secondary-main);
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include use-theme(background, $palette-common-white, $palette-common-black);
+      @include use-theme(opacity, 0.9, 0.6);
+    }
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      @include use-theme(background-image, url($deco-bottom-light), url($deco-bottom-dark));
+      background-position: bottom left;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .slick-dots {
+      bottom: 25px;
+    }
+  }
+  .banner-wrap {
+    position: relative;
+    z-index: 2;
+  }
+  .slider {
+    z-index: 1;
+    height: auto;
+  }
+  .slide {
+    direction: ltr;
+    * {
+      direction: ltr;
+    }
+    @include breakpoints-down(sm) {
+      text-align: center;
+      padding: spacing(15, 0, 5, 0);
+    }
+    @include breakpoints-down(xs) {
+      padding: spacing(15, 0, 5)
+    }
+    img {
+      margin: 0 auto;
+      max-height: 350px;
+      position: relative;
+      @include breakpoints-up(md) {
+        max-width: 100%;
+      }
+      @include breakpoints-down(sm) {
+        margin-top: $spacing2
+      }
+      @include breakpoints-down(xs) {
+        max-height: 230px
+      }
+    }
+    &.center-content {
+      @include breakpoints-up(md) {
+        padding-top: 120px !important;
+      }
+    }
+  }
+  .img-slide1 {
+    @include breakpoints-between(md, lg) {
+      float: left
+    }
+  }
+
+  .img-slide2 {
+    @include breakpoints-up(md) {
+      margin-right: 0 !important;
+    }
+    @include breakpoints-between(md, lg) {
+      float: right
+    }
+  }
+
+  .h-banner {
+    text-align: center;
+    img {
+      @include breakpoints-up(md) {
+        margin-top: $spacing2;
+        width: 50%;
+      }
+    }
+  }
+  .background-banner {
+    position: absolute;
+    z-index: 3;
+    right: -280px;
+    img {
+      max-height: 320px;
+    }
+    @include breakpoints-up(xl) {
+      display: none;
+    }
+    @include breakpoints-down(sm) {
+      right: -380px;
+      bottom: 0;
+    }
+    @include breakpoints-down(xs) {
+      display: none;
+    }
+  }
+  .carousel {
+    .slide {
+      @include breakpoints-up('lg') {
+        height: 640px;
+      }
+      @include breakpoints-up('md') {
+        padding-top: $spacing10;
+        height: 560px;
+      }
+    }
+  }
+  .inner {
+    display: flex;
+    height: 100%;
+    position: relative;
+    align-items: center;
+    @include breakpoints-down('md') {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .text {
+    h4 {
+      font-weight: $font-bold;
+      margin-bottom: $spacing2;
+    }
+    h5 {
+      @include palette-text-secondary;
+      margin-bottom: $spacing4;
+      font-weight: $font-medium;
+    }
+  }
+  .title {
+    position: relative;
+    h4 {
+      position: relative;
+    }
+  }
+  .title-wrap {
+    display: inline-block;
+    margin: 0 auto;
+  }
+  .btn-area {
+    margin-top: $spacing5;
+    position: relative;
+    z-index: 2;
+    @include breakpoints-down(sm) {
+      text-align: center
+    }
+    .button {
+      @include margin-right($spacing2);
+      @include breakpoints-down(xs) {
+        margin-bottom: $spacing3;
+        height: 50px;
+      }
+    }
+  }
+  .slide-nav-group {
+    position: relative;
+    z-index: 2
+  }
+  .slide-nav {
+    display: flex;
+    position: relative;
+    z-index: 5;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: auto;
+    a {
+      line-height: normal;
+      text-transform: none;
+      height: auto;
+      flex: 1;
+      border: 1px solid transparent;
+      font-weight: $font-regular;
+      position: relative;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+      padding: spacing(1, 1.5);
+      font-size: 14px;
+      strong {
+        text-transform: capitalize;
+        font-size: 28px;
+        display: block;
+        font-weight: $font-bold;
+        @include margin-left(-2px);
+        z-index: 1;
+      }
+      &:hover {
+        border-color: $palette-secondary-main;
+        @include use-theme(background, rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.08))
+      }
+      &.active {
+        @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+        strong {
+          @include use-theme(color, $palette-secondary-dark, $palette-secondary-light);
+        }
+      }
+    }
+  }
+
+  .divider {
+    margin: 0 $spacing2;
+    @include palette-divider;
+    min-height: 0;
+    max-height: calc(100% - 16px);
+    align-self: stretch;
+    border: solid;
+    border-width: 0 thin 0 0;
+    display: inline-flex;
+    height: inherit;
+    max-width: 0;
+    width: 0;
+    vertical-align: text-bottom;
+    flex: 1 1 0px;
+  }
+}

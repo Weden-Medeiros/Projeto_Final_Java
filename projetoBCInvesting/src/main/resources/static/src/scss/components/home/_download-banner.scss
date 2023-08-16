@@ -1,0 +1,93 @@
+$hexa-secondary: '../images/crypto/hexa-secondary.svg';
+$hexa-accent: '../images/crypto/hexa-accent.svg';
+
+#download-banner {
+  .root {
+    background: $palette-primary-main;
+    border-radius: $rounded-medium;
+    color: $palette-common-white;
+    display: flex;
+    position: relative;
+    z-index: 10;
+    margin-top: $spacing10;
+    padding: $spacing2;
+    @include breakpoints-up(md) {
+      padding: $spacing5;
+    }
+    @include breakpoints-up(sm) {
+      height: 240px;
+      padding: $spacing3;
+      margin-left: $spacing5;
+      margin-right: $spacing5;
+    }
+    @include breakpoints-down(xs) {
+      text-align: center
+    }
+    & > div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &:before {
+      content: "";
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      top: -20px;
+      left: 240px;
+      background: url($hexa-secondary) no-repeat;
+      background-size: 100%;
+    }
+    &:after {
+      content: "";
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      bottom: -10px;
+      right: -20px;
+      background: url($hexa-accent) no-repeat;
+      background-size: 100%;
+    }
+    h3 {
+      font-weight: $font-bold;
+      font-size: 28px;
+      @include breakpoints-up(md) {
+        font-size: 36px;
+      }
+    }
+    figure {
+      border: 6px solid $palette-common-white;
+      background: $palette-common-white;
+      overflow: hidden;
+      border-radius: $rounded-medium;
+      width: 174px;
+      height: 325px;
+      @include shade;
+      position: relative;
+      top: -80px;
+      @include margin-right($spacing5);
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .btn-area {
+    margin-top: $spacing4;
+    display: flex;
+    a {
+      display: block;
+      flex: 1;
+      @include breakpoints-up(sm) {
+        @include margin-right($spacing2);
+      }
+      @include breakpoints-down(xs) {
+        margin: 0 2px;
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}

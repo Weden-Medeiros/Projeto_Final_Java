@@ -1,0 +1,67 @@
+$deco-light: '../images/crypto/deco-footer-light.svg';
+$deco-dark: '../images/crypto/deco-footer-dark.svg';
+
+.footer-counter {
+  position: relative;
+  padding-top: 240px;
+  margin-top: -320px;
+  background-image: linear-gradient(120deg, $palette-primary-main, $palette-secondary-main);
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include use-theme(background, $palette-common-white, $palette-common-black);
+    @include use-theme(opacity, 0.9, 0.6);
+  }
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include use-theme(background, $palette-common-white, $dark-background-default);
+    opacity: 0.8;
+  }
+  &.extend {
+    margin-top: $spacing10 * -3;
+    @include breakpoints-up(lg) {
+      margin-top: $spacing10 * -4;
+    }
+  }
+  .deco {
+    content: "";
+    overflow: hidden;
+    @include use-theme(background-image, url($deco-light), url($deco-dark));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 350px;
+    @include breakpoints-down(xs) {
+      height: 120px;
+    }
+    @media only screen and (min-width: 1400px) { 
+      background-position: 0 -70px
+    }
+  }
+  .action {
+    text-align: center;
+    padding: spacing(0, 2);
+    position: relative;
+    padding-bottom: $spacing7;
+    h4 {
+      font-weight: $font-medium;
+      margin-bottom: $spacing3;
+      @include breakpoints-down(xs) {
+        font-size: 28px;
+        line-height: 44px
+      }
+    }
+  }
+}
+

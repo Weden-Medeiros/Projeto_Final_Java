@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="69px" viewBox="0 0 79 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="34.1894281%" y1="14.3140713%" x2="132.383617%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFA000" offset="0%"></stop>
+            <stop stop-color="#FFECB3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-197.000000, -3162.000000)" fill="url(#linearGradient-1)" id="Benefit">
+            <g transform="translate(0.000000, 3076.000000)">
+                <g id="Deco" transform="translate(56.000000, 0.000000)">
+                    <path d="M146,135.764825 C146,138.612352 147.523121,141.243717 149.995727,142.66748 L176.504273,157.932177 C178.976879,159.355941 182.023121,159.355941 184.495727,157.932177 L211.004273,142.66748 C213.476879,141.243717 215,138.612352 215,135.764825 L215,105.235303 C215,102.387648 213.476879,99.7564112 211.004273,98.3325199 L184.495727,83.0678227 C182.023121,81.6440591 178.976879,81.6440591 176.504273,83.0678227 L149.995727,98.3325199 C147.523121,99.7564112 146,102.387648 146,105.235303 L146,135.764825 Z" id="Fill-1" transform="translate(180.500000, 120.500000) rotate(-330.000000) translate(-180.500000, -120.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,28 +1,29 @@
 package br.com.bcinvesting.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import br.com.bcinvesting.model.Usuario;
 import br.com.bcinvesting.repository.UsuariosRepo;
 
+
 @Controller
-public class HomeController{
+public class UsuariosController{
 	
+	@Autowired
 	private UsuariosRepo repo;
 	
-	@GetMapping("/")
-	public String index(){
-		return "home/index";
+	@GetMapping("/usuarios")
+	public String index(Model model){
+		List<Usuario> usuarios = (List<Usuario>)repo.findAll();
+		model.addAttribute("usuarios", usuarios);
+		return "usuarios/index";
 	}
 	
-	
-	@PostMapping("/logar")
-	public String logar(Model model, Usuario usuParam, String senha, String lembrar){
-		return "login/index";
-	}
 	
 	
 }

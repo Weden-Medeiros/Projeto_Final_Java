@@ -1037,7 +1037,7 @@
                 <div class="col-md-8 px-0 px-sm-3">
                   <div class="blog-style">
                     <article class="blog-content">
-                      <h4 class="text-h4 title-blog">Maecenas rutrum dolor sed nisi</h4><span class="caption">June 19, 2021 by Oliver</span>
+                      <h4 class="text-h4 title-blog">Administrar Usuários</h4>
                     </article>
                   </div>
                   <!--<div class="comment">
@@ -1108,7 +1108,7 @@
                 </div><!-- ##### EMD ARTICLE #####-->
 
                 <!-- ##### SIDEBAR #####-->
-                <div class="col-md-4 px-0 px-sm-3">
+                <div class="col-md-12 px-0 px-sm-3">
                   <div class="blog-style">
                     <div class="sidebar">
                       <!--<div class="card paper color">
@@ -1201,11 +1201,49 @@
                         <header>
                           <div class="icon"><i class="material-icons small">message</i></div>
                           <div class="card-content">
-                            <span class="card-title">Latest Comment</span>
+                            <span class="card-title">Usuários cadastrados</span>
                           </div>
                         </header>
                         <div class="content">
-                          <div class="collection">
+							<div class="collection">
+					            <!-- Table Header -->
+					            <div class="collection-item table-header row">
+					              <span class="col-md-3 d-block use-text-medium">Nome</span>
+					              <span class="col-md-3 d-block use-text-medium">Email</span>
+					              <span class="col-md-2 d-block use-text-medium">CPF</span>
+					              <span class="col-md-2 d-block use-text-medium">Perfil</span>
+					              <span class="col-md-2 d-block use-text-medium">Ação</span>
+					            </div>
+					
+					            <!-- User Rows -->
+					            <div class="row" style="top: 17px;position: inherit;" th:each="usuario : ${usuarios}">
+					            	<!--<a class="waves-effect collection-item avatar row" href="#!">-->
+					                	<span class="col-md-3 d-block use-text-medium" th:text="${usuario.nome}" style="left: 20px;"></span>
+					                	<span class="col-md-3 d-block use-text-medium" th:text="${usuario.email}"></span>
+					                	<span class="col-md-2 d-block use-text-medium" th:text="${usuario.cpf}"></span>
+					                	<span class="col-md-2 d-block use-text-medium" th:text="${usuario.perfil_usuario}"></span>
+					                	<!--<div class="col-md-2 action-buttons">-->
+										<span class="col-md-2 d-block use-text-medium">
+											<div class="icon">
+												<a href="#" class="btn">
+													<i class="material-icons small">edit</i>
+												</a>
+												<!--<a href="#" th:onclick="'if(confirm(\'Deseja realmente excluir usuário ?\')) { window.location.href = \'' + @{/usuarios/{id}(id=${usuario.id})} + '/excluir\' } '" class="btn">
+													<i class="material-icons small">delete</i>
+												</a>-->
+											</div>
+											<!--<a href="#" class="btn btn-danger">Excluir</a>-->
+										</span>
+					                  		
+					                  		
+					                	<!--</div>>-->
+					            	<!--</a>-->
+					            </div>
+					
+					        
+					
+					        </div>
+                          <!--<div class="collection">
                             <a class="waves-effect collection-item avatar" href="#!">
                               <i class="circle icon avatar-char teal">J</i>
                               <span class="d-block use-text-medium">John Doe</span>
@@ -1241,10 +1279,10 @@
                               <span class="d-block use-text-medium">Johan Doe</span>
                               <span>Duis viverra neque eget </span>
                             </a>
-                          </div>
+                          </div>-->
                         </div>
                         
-                        <div class="py-3"></div>
+                        <!--<div class="py-3"></div>
                         
                         <div class="card-body">
 							<div class="table-responsive">
@@ -1281,7 +1319,7 @@
 									</tbody>
 								</table>
 							</div>
-						</div>
+						</div>-->
                         
                         
                       </div>
@@ -1380,7 +1418,7 @@
           </div>
 
           <!-- ##### FOOTER #####-->
-          <div id="footer">
+          <!--<div id="footer">
             <footer class="footer-sitemap">
               <div class="container mq-sm-down" data-class="fixed-width">
                 <div class="row mb-0">
@@ -1481,7 +1519,7 @@
                 </div>
               </div>
             </footer>
-          </div><!-- ##### END FOOTER #####-->
+          </div>--><!-- ##### END FOOTER #####-->
 
         </div>
       </div>

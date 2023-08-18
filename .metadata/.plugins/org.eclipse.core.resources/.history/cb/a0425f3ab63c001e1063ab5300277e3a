@@ -1,0 +1,22 @@
+package br.com.bcinvesting.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@Controller
+public class UsuariosController{
+	
+	@GetMapping("/usuarios")
+	public String index(Model model){
+		List<Usuario> usuarios = UsuariosRepo
+		model.addAttribute("usuarios", usuarios);
+		return "usuarios/index";
+	}
+	
+	
+	
+}

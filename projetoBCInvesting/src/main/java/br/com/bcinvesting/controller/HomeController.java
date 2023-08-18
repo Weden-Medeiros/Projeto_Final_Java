@@ -19,10 +19,10 @@ public class HomeController{
 	}
 	
 	
-	@PostMapping("/logar")
-	public String logar(Model model, Usuario usuParam, String senha, String lembrar){
-		return "login/index";
-	}
+//	@PostMapping("/logar")
+//	public String logar(Model model, Usuario usuParam, String senha, String lembrar){
+//		return "login/index";
+//	}
 	
 	
 }

@@ -1,0 +1,21 @@
+package br.com.bcinvesting.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import br.com.bcinvesting.model.Usuario;
+import br.com.bcinvesting.repository.UsuariosRepo;
+
+@Controller
+public class UsuariosController{
+	
+	@GetMapping("/usuarios")
+	public String index(Model model){
+		model.addAttribute("nome", "Janaina")
+		//return "home/index";
+	}
+	
+	
+	
+}

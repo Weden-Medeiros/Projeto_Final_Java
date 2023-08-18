@@ -98,13 +98,13 @@
               <div class="header-content">
                 <nav class="nav-menu flex-grow-1">
                   <div class="logo flex-grow-1 start-mobile">
-                    <a href="index.html">
-                      <span class="logo-main landscape large"><img src="./assets/images/logo-crypto.png" alt="logo"/>Crypto</span>
+                    <a href="/">
+                      <span class="logo-main landscape large"><img src="./assets/images/logo-crypto.png" alt="logo"/>BC Investing</span>
                     </a>
                   </div>
                   <nav class="user-menu">
-                    <a class="btn secondary waves-effect" href="register.html">register</a>
-                    <span class="spacer vertical-divider show-md-up"></span>
+                    <a class="btn secondary waves-effect" href="/usuarios/cadastro">Criar uma conta</a>
+                    <!--<span class="spacer vertical-divider show-md-up"></span>
                     <div class="menu-setting">
                       <div class="setting">
                         <button class="btn btn-icon waves-effect btn-small dropdown-trigger ma-1" data-target="dropdown_config" data-align="left" type="button">
@@ -167,7 +167,7 @@
                           </ul>
                         </div>
                       </div>
-                    </div>
+                    </div>-->
                   </nav>
                 </nav>
               </div>
@@ -189,7 +189,7 @@
                           <div class="form-wrap">
                             <div class="form-style">
                               <div class="head">
-                                <h4 class="use-text-title mq-md-up" data-class="use-text-subtitle">Seja Muit bem vindo</h4>
+                                <h4 class="use-text-title mq-md-up" data-class="use-text-subtitle">Seja Muito bem vindo</h4>
                               </div>
                               <!--<div class="socmed-side-login">
                                 <button class="btn navi-btn waves-effect"><i class="ion-social-facebook left"></i>Facebook</button>
@@ -224,7 +224,8 @@
                                   <a class="btn-flat button-link" href="#">Forgot Password</a>
                                 </div> -->
                                 <div class="btn-area">
-                                  <button class="btn primary btn-large block waves-effect" type="submit">Entrar</button>
+									<div th:if="${erro != null}" th:text="${erro}" clas="alert alert-danger" role="alert"></div>	
+                                  	<button class="btn primary btn-large block waves-effect" type="submit">Entrar</button>
                                 </div>
                               </form>
                             </div>
@@ -260,10 +261,10 @@
                       <div class="logo">
                         <span class="logo-main landscape large"><img src="./assets/images/logo-crypto.png" alt="logo"/>Crypto</span>
                       </div>
-                      <p class="body-2">This international trading platform provides innovative tokens a more streamlined approach.</p>
-                      <p class="body-2 hidden-sm-down">&copy; Nirwana Theme 2022</p>
+                      <p class="body-2">Na BC Investing, oferecemos estratégias financeiras inovadoras que transformam seus sonhos em realidade. Nossa abordagem personalizada simplifica o caminho para o sucesso financeiro.</p>
+                      <p class="body-2 hidden-sm-down">&copy; Todos os direitos reservados</p>
                     </div>
-                    <div class="col-md-6 pa-4">
+                    <!--<div class="col-md-6 pa-4">
                       <ul class="show-sm-down collapsible">
                         <li class="accordion-content">
                           <div class="collapsible-header">
@@ -330,7 +331,7 @@
                           </ul>
                         </div>
                       </div>
-                    </div>
+                    </div>-->
                     <div class="col-md-3 pa-4">
                       <div class="socmed">
                         <a class="btn btn-icon waves-effect"><span class="ion-social-facebook icon"></span></a>
@@ -348,7 +349,7 @@
                           <option value="zh">简体中文</option>
                         </select>
                       </div>
-                      <p class="body-2 mt-5 text-center hidden-md-up">&copy; Nirwana Theme 2022</p>
+                      <!--<p class="body-2 mt-5 text-center hidden-md-up">&copy; Nirwana Theme 2022</p>-->
                     </div>
                   </div>
                 </div>

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+
 import br.com.bcinvesting.model.Usuario;
 import br.com.bcinvesting.repository.UsuariosRepo;
 
@@ -37,11 +38,11 @@ public class UsuariosController{
 		return "redirect:/";
 	}
 	
-//	@GetMapping("/usuarios/{id}/excluir") //usando get pois esta usando parametro
-//	public String excluir(@PathVariable int id){
-//		repo.deleteById(id);
-//		return "redirect:/usuarios";
-//	}
+	@GetMapping("/usuarios/{id}/excluir") //usando get pois esta usando parametro
+	public String excluir(@PathVariable int id){
+		repo.deleteById(id);
+		return "redirect:/usuarios";
+	}
 	
 	
 	

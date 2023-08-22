@@ -27,7 +27,7 @@ public class LoginController{
 	public String logar(Model model, Usuario usuParam){
 		Usuario usu = this.repo.Login(usuParam.getEmail(), usuParam.getSenha());
 		if(usu != null) {
-			return "redirect:/";
+			return "principal/tela_inicial";
 		}
 		model.addAttribute("erro", "Usuário ou senha inválidos");
 		return "login/index";

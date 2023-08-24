@@ -120,50 +120,38 @@
                 <div class="container inner-wrap">
                   <div class="auth-frame">
                     <div class="row mb-0">
-                      <div class="col-md-6 px-lg-6 px-2">
+                      <div class="col-md-12 px-lg-12 px-2">
                         <div class="card form-box fragment-fadeUp">
                           <div class="form-wrap">
-                            <!--<div class="form-style">
-                              <div class="head">
-                                <h4 class="use-text-title mq-md-up" data-class="use-text-subtitle">Criar uma Conta</h4>
-                              </div>-->
-                              <!--<form method="POST" action="/usuarios/criar" id="register_form">
-                                <div class="row spacing3 mb-0">
-                                  <div class="col-sm-12">
-                                    <div class="input-field filled">
-                                      <input class="validate" type="text" id="nome" name="nome" placeholder="Digite o seu nome" required />
-                                      <label for="nome">Nome</label>
-                                    </div>
-                                  </div>
-                                  <div class="col-sm-12">
-                                    <div class="input-field filled">
-                                      <input class="validate" type="email" id="email" name="email" placeholder="Digite seu email" required />
-                                      <label for="email">Email</label>
-                                    </div>
-                                  </div>
-                                  <div class="col-sm-12">
-                                    <div class="input-field filled">
-                                      <input class="validate" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required />
-                                      <label for="cpf">CPF</label>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-12">
-                                    <div class="input-field filled mq-md-up" data-class="me-2">
-                                      <input class="validate" type="password" id="senha" name="senha" required />
-                                      <label for="senha">Senha</label>
-                                    </div>
-                                  </div>
-                                </div>
-                                  <div class="mt-4"><button type="submit" class="btn primary btn-large waves-effect">Enviar</button></div>
-                                </div>
-                              </form>-->
                               <div class="form-style">
+								<div class="head">
+                                	<h4 class="use-text-title mq-md-up" data-class="use-text-subtitle">Editar dados dos usuários</h4>
+                              	</div>
 						        <form th:object="${usuario}" th:action="@{/usuarios/{id}/atualizar(id=${usuario.id_usuario})}" method="post">
 						            <!-- Input fields for user data -->
-						            <input type="text" th:field="*{nome}" placeholder="Nome" required />
-						            <input type="email" th:field="*{email}" placeholder="Email" required />
-						            <input type="text" th:field="*{cpf}" placeholder="CPF" required />
-						            <input type="text" th:field="*{perfil_usuario}" placeholder="Perfil do Usuário" required />
+						            <div class="input-field filled">
+                                      <input type="text" th:field="*{nome}" placeholder="Nome" required />
+                                      <label for="nome">Nome</label>
+                                    </div>
+                                    <div class="input-field filled">
+                                      <input type="email" th:field="*{email}" placeholder="Email" required />
+                                      <label for="email">Email</label>
+                                    </div>
+						            <div class="input-field filled">
+                                      <input type="text" th:field="*{cpf}" placeholder="CPF" required />
+                                      <label for="cpf">CPF</label>
+                                    </div>
+						            <div class="input-field filled">
+                                      <input type="text" th:field="*{perfil_usuario}" placeholder="Perfil do Usuário" required />
+                                      <label for="perfil_usuario">Perfil do Usuário</label>
+                                    </div>
+                                    <div class="input-field filled">
+                                      <input type="text" th:field="*{senha}" placeholder="Senha" required />
+                                      <label for="senha">Senha</label>
+                                    </div>
+						            
+						            
+						            
 						
 						            <!-- Add more input fields as needed -->
 						
@@ -171,17 +159,6 @@
 						        </form>
 						    </div>
                             <!--</div>-->
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="hidden-sm-down">
-                          <div class="greeting">
-                            <h4 class="use-text-title2 use-text-primary pb-2">Basta se registrar e venha se juntar a nós</h4>
-                            <h6 class="use-text-subtitle2">Uma plataforma com integração eficiente que vai fazer o seu dinheiro trabalhar para você!</h6>
-                            <div class="img">
-                              <img class="img-2d3d" src="/assets/images/crypto/register_3D@2x.png" data-2d="./assets" data-3d="./assets/images/crypto/register_3D@2x.png" alt="registes" />
-                            </div>
                           </div>
                         </div>
                       </div>

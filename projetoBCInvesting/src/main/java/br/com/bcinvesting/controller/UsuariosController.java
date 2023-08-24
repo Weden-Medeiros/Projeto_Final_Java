@@ -82,29 +82,29 @@ public class UsuariosController{
         }
     }
 
-//    @PostMapping("/usuarios/{id}/atualizar")
-//    public String atualizar(@PathVariable int id, Usuario usuario) {
-//        usuario.setId_usuario(id); // Ensure ID is set for updating
-//        repo.save(usuario);
-//        return "redirect:/usuarios";
-//    }
+    @PostMapping("/usuarios/{id}/atualizar")
+    public String atualizar(@PathVariable int id, Usuario usuario) {
+        usuario.setId_usuario(id); // Ensure ID is set for updating
+        repo.save(usuario);
+        return "redirect:/usuarios";
+    }
 	
-	@PostMapping("/usuarios/{id}/atualizar")
-	public String atualizar(@PathVariable int id, @Valid Usuario usuario, BindingResult result) {
-	    if (result.hasErrors()) {
-	        // Se houver erros de validação, retorne para a página de edição com mensagens de erro
-	        return "pagina_de_edicao";
-	    }
-	    
-	    usuario.setId_usuario(id); // Certifique-se de que o ID seja definido para atualização
-	    try {
-	        repo.save(usuario);
-	    } catch (Exception e) {
-	        // Lidar com exceções de salvamento (por exemplo, ConstraintViolationException) aqui
-	        // Pode redirecionar para uma página de erro ou retornar mensagens de erro
-	    }
-	    
-	    return "redirect:/usuarios"; // Redirecionamento após a atualização bem-sucedida
-	}
+//	@PostMapping("/usuarios/{id}/atualizar")
+//	public String atualizar(@PathVariable int id, @Valid Usuario usuario, BindingResult result) {
+//	    if (result.hasErrors()) {
+//	        // Se houver erros de validação, retorne para a página de edição com mensagens de erro
+//	        return "pagina_de_edicao";
+//	    }
+//	    
+//	    usuario.setId_usuario(id); // Certifique-se de que o ID seja definido para atualização
+//	    try {
+//	        repo.save(usuario);
+//	    } catch (Exception e) {
+//	        // Lidar com exceções de salvamento (por exemplo, ConstraintViolationException) aqui
+//	        // Pode redirecionar para uma página de erro ou retornar mensagens de erro
+//	    }
+//	    
+//	    return "redirect:/usuarios"; // Redirecionamento após a atualização bem-sucedida
+//	}
 	
 }

@@ -30,9 +30,6 @@ public class Usuario {
 	@Column(name = "senha", length = 255, nullable = false)
 	private String senha;
 	
-	@Column(name = "data_cadastro")
-	private Date data_cadastro;
-	
 	@Column(name = "perfil_usuario", length = 3)
 	private int perfil_usuario;
 	
@@ -78,14 +75,6 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
-	public Date getData_cadastro() {
-	    return data_cadastro;
-	}
-
-	public void setData_cadastro(Date data_cadastro) {
-	    this.data_cadastro = data_cadastro;
-	}
-
 	public int getPerfil_usuario() {
 	    return perfil_usuario;
 	}
